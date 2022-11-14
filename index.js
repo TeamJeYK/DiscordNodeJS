@@ -16,10 +16,10 @@ client.once("ready", (c) => {
 client.on("messageCreate", async (message) => {
     if (message.author == client.bot) return;
 
-    let prefix = "--"
+    let prefix = "--";
 
     if (message.content.toLowerCase().startsWith(`${prefix}ping`)) {
-        message.reply("***Pong!***")
+        message.reply("***Pong!***");
     }
 })
 

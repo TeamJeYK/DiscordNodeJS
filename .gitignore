@@ -3,4 +3,5 @@
 replit.nix
 .upm
 node_modules
+.git
 package-lock.json
