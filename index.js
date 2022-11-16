@@ -1,4 +1,5 @@
-const { Client, Events, GatewayIntentBits } = require('discord.js');
+const { Client, GatewayIntentBits, Collection } = require('discord.js');
+const slash = require('./src/slashCommands/applySlash.js')
 
 const client = new Client({
 	intents: [
@@ -10,7 +11,9 @@ const client = new Client({
 });
 
 client.once("ready", (c) => {
-	console.log(`Ready! Logged in as ${c.user.tag}`);
+	setTimeout(function() {
+        console.log(`\nReady! Logged in as ${c.user.tag}`);
+    }, 600)
 });
 
 client.on("messageCreate", async (message) => {
